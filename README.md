@@ -67,3 +67,25 @@ Found as `bool`
 Found as `char`
 
 ### Compound Types
+* tuple
+
+Used as 
+```
+let tup: (type1, type2, type3, ....) = (value1, value2, value3, ...);
+```
+* array
+
+```
+// Explicitly declaring
+let a = [1, 2, 3, 4, 5];
+// Explicitly declare with type annotation
+let b: [type; n_length] = [value_1, value_2, ..., value_n];
+// make array of length n populated with value
+let c = [value; length];
+```
+Index
+```
+let x = array[index];
+```
+
+## Functions

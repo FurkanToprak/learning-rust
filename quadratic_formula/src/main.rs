@@ -27,6 +27,7 @@ fn main() {
     let c: f32 = c_input.trim().parse().expect(number_error);
     println!("{}*x^2 + {}*x + {} = 0", a_input, b_input, c_input);
     let solution_space_check = b.pow(2) - 4 * a * c;
-    let solution1 = (-b + sqrt(solution_space_check) / (2 * a)
-    let solution2 = (-b - sqrt(solution_space_check) / (2 * a)
+    // if solution_space_check
+    let solution1 = (-b + sqrt(solution_space_check) / (2 * a);
+    let solution2 = (-b - sqrt(solution_space_check) / (2 * a);
 }

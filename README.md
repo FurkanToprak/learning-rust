@@ -67,13 +67,16 @@ Found as `bool`
 Found as `char`
 
 ### Compound Types
-* tuple
 
-Used as 
+- tuple
+
+Used as
+
 ```
 let tup: (type1, type2, type3, ....) = (value1, value2, value3, ...);
 ```
-* array
+
+- array
 
 ```
 // Explicitly declaring
@@ -83,9 +86,84 @@ let b: [type; n_length] = [value_1, value_2, ..., value_n];
 // make array of length n populated with value
 let c = [value; length];
 ```
+
 Index
+
 ```
 let x = array[index];
 ```
 
 ## Functions
+
+```
+fn main() {
+    foo(val_1, val_2, ..., val_n);
+}
+
+fn foo(param_1: type_1, param_2: type_2, ..., param_n: type_n) {
+    // Statement
+}
+```
+
+#### Note
+
+Function definition are statements, which do not return values. Rust does not allow statements to be attached to non-existant values.
+
+Therefore in rust, you can not do the following:
+```
+fn main() {
+    let x = (let y = z);
+}
+```
+
+### Returning in functions and declaring function's return value
+```
+fn increment(value) -> type {
+    value + 1
+}
+```
+
+### Control flow
+```
+if boolean_1 {
+    statement_1;
+} else if boolean_2 {
+    statement_2;
+} else {
+    statement_n;
+}
+```
+### Ternary
+```
+let number = if condition { value_1 } else { value_2 };
+```
+Note that `value_1` and `value_2` must have the same type.
+
+## Loops
+```
+// Runs until Ctrl+C
+let mut value = 0;
+loop {
+    println("This is an infinitr loop");
+    if condition {
+        break value;
+    }
+}
+
+// While loop
+while condition {
+    statement();
+}
+
+// For loop
+let a = [10, 20, 30, 40, 50];
+
+for element in a.iter() {
+    println!("the value is: {}", element);
+}
+
+// For loop with numerical iterator
+for number in (a..b).rev() {
+    println!(number);
+}
+```
